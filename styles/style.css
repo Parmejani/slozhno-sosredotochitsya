@@ -7,12 +7,11 @@
   font-family: 'IBM Plex mono', serif;
   font-weight: normal;
   font-size: 18px;
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--bg-color, #000028);
-  background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
-  color: var(--font-color, #F1B2CE);
 }
 
 
@@ -104,10 +103,10 @@
 
 .accent__title {
   display: block;
-  background-color: var(--accent-color);
+  color: var(--subtitle-color, #000028);
   font-weight: bold;
   font-size: inherit;
-  color: var(--subtitle-color, #000028);
+  background-color: var(--accent-color);
 }
 
 .accent__title:not(h3) {
@@ -122,8 +121,8 @@
 }
 
 .main__content-section-title {
-  font-size: inherit;
   color: var(--title-color, #ff0070);
+  font-size: inherit;
 }
 
 .subtitle {
@@ -169,8 +168,8 @@
   grid-area: 1 / 1 / 2 / 1;
   align-self: center;
   margin-inline-start: auto;
-  text-align: center;
   color: var(--header-elements-clr, #ff0070);
+  text-align: center;
 }
 
 .header__theme-menu-list {
@@ -181,8 +180,8 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   outline: 1px solid var(--header-elements-clr, #ff0070);
+  pointer-events: none;
 }
 
 .header > .accent__title {
