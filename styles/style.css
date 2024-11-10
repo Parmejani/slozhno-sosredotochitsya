@@ -206,6 +206,16 @@
   margin-block-end: 18px;
 }
 
+.main__content-images {
+  display: grid;
+  gap: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
+}
+
+.image {
+  object-fit: cover;
+  inline-size: 100%;
+}
+
 
 /* Медиазапросы */
 
@@ -269,6 +279,40 @@
   .main__content-section:nth-child(3) > 
   .main__content-section-title {
     grid-area: 1 / 1 / span 5 / 1;
+  }
+
+  .main__content-images {
+    grid: repeat(4, auto) / repeat(3, auto);
+    grid-template-areas: 
+      '. . .'
+      'sunset sunset ice'
+      'tape books ice'
+      'tape street street';
+      place-items: stretch;
+  }
+
+  .main__content-images > .accent__title {
+    grid-area: 1 / 1 / 1 / 4;
+  }
+  
+  .image:nth-child(2) {
+    grid-area: sunset;
+  }
+
+  .image:nth-child(3) {
+    grid-area: ice;
+  }
+
+  .image:nth-child(4) {
+    grid-area: tape;
+  }
+
+  .image:nth-child(5) {
+    grid-area: books;
+  }
+
+  .image:nth-child(6) {
+    grid-area: street;
   }
 }
 
