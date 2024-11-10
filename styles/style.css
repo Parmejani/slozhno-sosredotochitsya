@@ -39,6 +39,7 @@
   border-inline-start: 1px solid var(--accent-color, #FF0070);
   border-block-end: 1px solid var(--accent-color, #ff0070);
 }
+
 .header__theme-menu-button {
   position: relative;
   border: none;
@@ -216,6 +217,20 @@
   inline-size: 100%;
 }
 
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 50px;
+  block-size: calc(100vh - var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2);
+  inline-size: 100%;
+}
+
+.title:last-child {
+  text-shadow: 2px 2px var(--accent-color, #ff0070);
+}
+
 
 /* Медиазапросы */
 
@@ -313,6 +328,11 @@
 
   .image:nth-child(6) {
     grid-area: street;
+  }
+
+  .footer {
+    margin-block-start: 80px;
+    block-size: calc(100vh - 40px);
   }
 }
 
