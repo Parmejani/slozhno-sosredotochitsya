@@ -11,8 +11,15 @@
   */
   --bg-cover-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
-  --title-color: #DB00FF;
+  --header-title-color: #DB00FF;
   --accent-color: #FF0070;
+  --header-elements-clr: var(--accent-color);
   --font-color: #F1B2CE;
   --button-hover-color: #FF007066;
+  --title-color: var(--accent-color);
+  --subtitle-color: var(--bg-color);
+
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
+  color: var(--font-color, #F1B2CE);
 }

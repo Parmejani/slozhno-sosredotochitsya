@@ -7,11 +7,12 @@
   font-family: 'IBM Plex mono', serif;
   font-weight: normal;
   font-size: 18px;
-  background-color: var(--bg-color, #000028);
-  background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
+  color: var(--font-color, #F1B2CE);
 }
 
 
@@ -25,8 +26,8 @@
   right: 0;
   width: 25px;
   height: 25px;
-  border-inline-end: 1px solid var(--accent-color, #FF0070);
-  border-block-start: 1px solid var(--accent-color, #FF0070);
+  border-inline-end: 1px solid var(--header-elements-clr, #FF0070);
+  border-block-start: 1px solid var(--header-elements-clr, #FF0070);
 }
 
 .decorated-zone::before {
@@ -36,8 +37,8 @@
   left: 0;
   width: 25px;
   height: 25px;
-  border-inline-start: 1px solid var(--accent-color, #FF0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--header-elements-clr, #FF0070);
+  border-block-end: 1px solid var(--header-elements-clr, #ff0070);
 }
 
 .header__theme-menu-button {
@@ -49,10 +50,6 @@
   inline-size: 70px;
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--button-hover-color, #ff007066);
-}
-
 .header__theme-menu-button:focus {
   outline: none;
 }
@@ -60,7 +57,7 @@
 .header__theme-menu-button:focus-visible::after {
   content: '';
   position: absolute;
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--header-elements-clr, #ff0070);
   inline-size: 100%;
   inset-block-end: -0.2ch;
   inset-inline-start: 0;
@@ -98,7 +95,7 @@
 
 .title {
   position: relative;
-  color: var(--title-color, #DB00FF);
+  color: var(--header-title-color, #DB00FF);
   font-family: 'IBM Plex mono', serif;
   font-size: var(--mobile-title-fsize, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   line-height: 0.825em;
@@ -107,10 +104,10 @@
 
 .accent__title {
   display: block;
-  color: var(--bg-color, #000028);
+  background-color: var(--accent-color);
   font-weight: bold;
   font-size: inherit;
-  background-color: var(--accent-color, #ff0070);
+  color: var(--subtitle-color, #000028);
 }
 
 .accent__title:not(h3) {
@@ -125,8 +122,8 @@
 }
 
 .main__content-section-title {
-  color: var(--accent-color, #ff0070);
   font-size: inherit;
+  color: var(--title-color, #ff0070);
 }
 
 .subtitle {
@@ -172,8 +169,8 @@
   grid-area: 1 / 1 / 2 / 1;
   align-self: center;
   margin-inline-start: auto;
-  color: var(--accent-color, #ff0070);
   text-align: center;
+  color: var(--header-elements-clr, #ff0070);
 }
 
 .header__theme-menu-list {
@@ -184,8 +181,8 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color, #ff0070);
   pointer-events: none;
+  outline: 1px solid var(--header-elements-clr, #ff0070);
 }
 
 .header > .accent__title {

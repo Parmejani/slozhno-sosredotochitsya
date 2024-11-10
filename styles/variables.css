@@ -5,10 +5,13 @@
 :root {
   --bg-cover-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
-  --title-color: #DB00FF;
+  --header-title-color: #DB00FF;
   --accent-color: #FF0070;
+  --header-elements-clr: var(--accent-color);
   --font-color: #F1B2CE;
   --button-hover-color: #FF007066;
+  --title-color: var(--accent-color);
+  --subtitle-color: var(--bg-color);
   --flexible-padding: clamp(10px, 2.7vi, 20px);
   --mobile-title-fsize: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --desk-title-fsize: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
