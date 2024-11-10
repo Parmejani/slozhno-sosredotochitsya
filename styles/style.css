@@ -62,6 +62,10 @@
   inset-inline-start: 0;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color, #FF007066);
+}
+
 .link {
   position: relative;
   display: inline-block;
@@ -106,7 +110,7 @@
   color: var(--subtitle-color, #000028);
   font-weight: bold;
   font-size: inherit;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color,#ff0070);
 }
 
 .accent__title:not(h3) {
