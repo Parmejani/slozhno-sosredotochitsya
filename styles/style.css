@@ -2,15 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
+  /*padding: var(--flexible-padding, clamp(10px, 2.7vi, 20px));*/
   color: var(--font-color, #f1b2ce);
-  font-family: 'IBM Plex mono', serif;
+  font-family: 'IBM Plex mono', monospace;
   font-weight: normal;
   font-size: 18px;
   background-color: var(--bg-color, #000028);
   background-image: var(--bg-cover-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -25,6 +26,7 @@
   right: 0;
   width: 25px;
   height: 25px;
+  margin: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
   border-inline-end: 1px solid var(--header-elements-clr, #FF0070);
   border-block-start: 1px solid var(--header-elements-clr, #FF0070);
 }
@@ -36,6 +38,7 @@
   left: 0;
   width: 25px;
   height: 25px;
+  margin: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
   border-inline-start: 1px solid var(--header-elements-clr, #FF0070);
   border-block-end: 1px solid var(--header-elements-clr, #ff0070);
 }
@@ -99,7 +102,7 @@
 .title {
   position: relative;
   color: var(--header-title-color, #DB00FF);
-  font-family: 'IBM Plex mono', serif;
+  font-family: 'IBM Plex mono', monospace;
   font-size: var(--mobile-title-fsize, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   line-height: 0.825em;
   text-shadow: 4px 4px var(--accent-color, #ff0070);
@@ -143,13 +146,16 @@
   grid-template-rows: 1fr min-content 1fr;
   margin-block-end: 50px;
   inline-size: 100%;
-  block-size: calc(100vh - (var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2));
-  min-block-size: calc(668px - (var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2));
+  block-size: 100vh;
+  min-block-size: 668px;
+  /*block-size: calc(100vh - (var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2));*/
+  /*min-block-size: calc(668px - (var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2));*/
 }
 
 .dark__theme-decoration {
   display: inline-block;
   grid-area: 1 / 1 / 2 / 1;
+  margin: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
   margin-inline-start: auto;
   color: var(--accent-color, #ff0070);
   text-transform: uppercase;
@@ -171,6 +177,7 @@
   display: block;
   grid-area: 1 / 1 / 2 / 1;
   align-self: center;
+  margin: var(--flexible-padding, clamp(10px, 2.7vi, 20px));
   margin-inline-start: auto;
   color: var(--header-elements-clr, #ff0070);
   text-align: center;
@@ -225,8 +232,8 @@
   justify-content: center;
   align-items: center;
   margin-block-start: 50px;
-  block-size: calc(100vh - var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2);
-  min-block-size: calc(668px - (var(--flexible-padding, clamp(10px, 2.7vi, 20px)) * 2));
+  block-size: 100vh;
+  min-block-size: 668px;
   inline-size: 100%;
 }
 
@@ -248,7 +255,7 @@
   .header {
     grid-template-columns: 1fr 1fr;
     margin-block-end: 80px;
-    block-size: calc(100vh - 40px);
+    /*block-size: calc(100vh - 40px);*/
   }
 
   .title {
@@ -335,7 +342,6 @@
 
   .footer {
     margin-block-start: 80px;
-    block-size: calc(100vh - 40px);
   }
 }
 

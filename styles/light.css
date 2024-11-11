@@ -32,7 +32,7 @@
 
 
 @media (prefers-color-scheme: light) {
-  .page.theme_auto {
+  :root {
     --bg-cover-image: url(../images/cover-image-light.png);
     --bg-color: #FFF1F7;
     --header-title-color: #FFC2E6;
@@ -42,12 +42,14 @@
     --button-hover-color: #32312D66;
     --title-color: var(--font-color);
     --subtitle-color: var(--font-color);
+  }
 
+  .theme_auto .page {
     background-image: var(--bg-cover-image, url(../images/cover-image-light.png));
     background-color: var(--bg-color, #FFF1F7);
     color: var(--font-color, #353430);
   }
-
+  
   .theme_auto .dark__theme-decoration {
     display: none;
   }
